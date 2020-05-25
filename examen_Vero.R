@@ -7,7 +7,7 @@
 # Prof. Gustavo Dejean
 #
 # Veronica Farach
-#
+# 
 # Preguntas del Examen
 # 
 
@@ -15,18 +15,21 @@
 ## 1
 ## Cual/es  funcion/es utilizaria para obtener los datos estadisticos basico de un DF?
 
-v = 1:100
-df <- data.frame(datos = v)
+V1 = 1:100 
+V2 = 101:200
+V3 = 201:300
+datos <- data.frame (V1, V2, V3)
 
-summary(df)
+
+summary(datos)
 
 library(dplyr)
-df %>% summarise( Min_Pob = min(datos),
-                  Q1er_pob = quantile(datos,0.25),
-                  Mediana_Pob = median(datos),
-                  Media_Pob = mean(datos),
-                  Q3er_pob = quantile(datos,0.75),
-                  Max_Pob = max(datos))
+datos %>% summarise( Min_Pob = min(V1),
+                  Q1er_pob = quantile(V1,0.25),
+                  Mediana_Pob = median(V1),
+                  Media_Pob = mean(V1),
+                  Q3er_pob = quantile(V1,0.75),
+                  Max_Pob = max(V1))
 
 
 ######################
